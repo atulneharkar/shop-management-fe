@@ -1,0 +1,266 @@
+header {
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62px;
+  z-index: 1;
+
+	.header-wrapper {
+		width: 100%;
+	  max-width: 1600px;
+	  padding: 20px;
+	  margin: 0 auto;
+	  height: 62px;
+
+		.main-logo {
+	    width: 124px;
+	    
+			.site-logo {
+				width: 100%;
+			}
+
+		  @media only screen and (max-width: 719px) {
+		  	position: relative;
+        z-index: 9999;
+		  }
+		}
+
+		.main-nav {
+			ul {
+				vertical-align: top;
+				display: inline-block;
+				margin-top: 2px;
+
+				@media only screen and (max-width: 719px) {
+					width: 100%;
+					text-align: center;
+				}
+
+				li {
+			    margin-right: 30px;
+					display: inline-block;
+
+					@media only screen and (min-width: 1024px) {
+						margin-right: 80px;
+					}
+
+					@media only screen and (min-width: 960px) and (max-width: 1023px) {
+						margin-right: 60px;
+					}
+
+					@media only screen and (max-width: 719px) {
+						display: block;
+						margin-bottom: 20px;
+				    margin-left: 20px;
+				    border-bottom: 0.5px solid #efefef;
+					}
+
+					a {
+				    @include full-font($avenir, 12px, #fff);
+
+				    &:hover,
+				    &.active {
+				    	color: #ff566f;
+				    }
+
+				    @media only screen and (max-width: 719px) {
+				    	color: #fff;
+		    	    width: 100%;
+    					display: block;
+    					padding-bottom: 20px;
+				    }
+			    }
+				}
+			}
+
+			.sign-in-btn {
+		    padding: 10px;
+		    background: #ff566f;
+		    border-radius: 4px;
+		    margin-top: -5px;
+		    display: inline-block;
+				@include full-font($avenir, 12px, #fff);
+
+		    &:hover {
+		    	background: #fff;
+		    	color: #333;
+
+		    	@media only screen and (max-width: 719px) {
+		    		color: #fff;
+		    	}
+		    }
+
+		    @media only screen and (max-width: 719px) {
+    	    width: 100px;
+			    text-align: center;
+			    margin: 0 auto;
+			    display: block;
+		    	padding: 15px;
+			    border-radius: 3px;
+		    	background: #ff566f;
+		      color: #fff;
+		    }
+			}
+
+			.hamburger-icon,
+			.close-icon {
+				display: none;
+				margin-top: -3px;
+				float: right;
+				position: relative;
+        z-index: 9999;
+				@media only screen and (max-width: 719px) {
+					display: block;
+			  }
+			}
+
+			@media only screen and (max-width: 719px) {
+				.hamburger-hide,
+				.close-icon {
+					display: none;
+				}
+
+				.close-icon-show {
+					display: block;
+				}
+			}
+
+			.close-icon {
+				margin-top: -1px;
+			}
+
+			@media only screen and (max-width: 719px) {
+			  .mobile-menu {
+			  	width: 100%;
+			  	padding: 20px 0;
+			  	display: none;
+			    background: #333;
+			  	position: absolute;
+			  	left: 0;
+    			top: 61px;
+    			z-index: 9999;
+			  }
+
+			  .mobile-menu-show {
+			  	display: block;
+			  }
+
+			  .overlay {
+  				width: 100%;
+  				height: 100%;
+  				display: none;
+  				position: fixed;
+  				top: 0;
+  				left: 0;
+  				z-index: 999;
+  				background: #333;
+  				opacity: 0.6;
+  			}
+
+  			.overlay-show {
+			  	display: block;
+			  }
+			}
+	  }
+
+		.my-profile {
+			display: inline-block;
+			position: relative;
+
+			@media only screen and (max-width: 719px) {
+				width: 100%;
+    		padding: 0 20px;
+			}
+
+			.profile-image {
+		    border-radius: 50%;
+        position: relative;
+		    top: -3px;
+
+		    @media only screen and (max-width: 719px) {
+		    	display: none;
+		    }
+			}
+
+			.additional-profile-info {
+				display: none;
+				padding: 20px;
+				position: absolute;
+		    right: -2px;
+    		top: 28px;
+		    z-index: 999;
+		    background: #ff566f;
+		    @include full-font($avenir, 14px, #fff);
+
+		    @media only screen and (max-width: 719px) {
+		    	display: block;
+		    	position: static;
+    	    padding: 0;
+    	    background: none;
+		    }
+
+		    p {
+		    	margin-bottom: 6px;
+
+		    	@media only screen and (max-width: 719px) {
+		    	  display: none;
+		      }
+		    }
+
+		    .profile-edit-wrapper {
+		    	margin-top: 20px;
+		    	a {
+		    		width: 45%;
+	  		    padding: 6px;
+				    border-radius: 3px;
+				    float: left;
+				    background: #fff;
+				    color: #333;
+				    text-align: center;
+				    text-decoration: none;
+
+				    @media only screen and (max-width: 719px) {
+				    	background: #ff566f;
+				      color: #fff;
+		          padding: 15px;
+			      }
+
+				    &:hover {
+				    	color: #ff566f;
+
+				    	@media only screen and (max-width: 719px) {
+					    	background: #ff566f;
+					      color: #fff;
+				      }
+				    }
+
+				    &:last-child {
+				    	float: right;
+				    }
+		    	}
+
+		    	@media only screen and (max-width: 719px) {
+		    		margin-top: 0;
+		    		text-align: center;
+		    	}
+		    }
+			}
+
+			&:hover {
+				.additional-profile-info {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.header-profile-img .header-wrapper {
+	padding-bottom: 10px;
+
+	@media only screen and (max-width: 719px) {
+		padding-bottom: 17px;
+	}
+}

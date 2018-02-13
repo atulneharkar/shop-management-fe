@@ -1,0 +1,16 @@
+.contact-form .contact-info {
+  border: 1px solid #efefef;
+  padding-bottom: 30px; }
+  .contact-form .contact-info > div {
+    width: 50%;
+    float: left; }
+    @media only screen and (max-width: 719px) {
+      .contact-form .contact-info > div {
+        width: 100%;
+        float: none; } }
+  .contact-form .contact-info .name {
+    font-size: 18px;
+    margin-top: 30px; }
+  .contact-form .contact-info p {
+    margin: 5px 0 0;
+    font-size: 14px; }

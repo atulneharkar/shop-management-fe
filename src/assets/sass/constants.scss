@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/avenir-next-regular.ttf");
+}
+
+//Typography
+$avenir: 'Avenir', Helvetica, Arial, sans-serif;
+
+//mixins
+@mixin full-font($family, $size: inherit, $color: inherit, $transform: none, $decoration: none) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    text-transform: $transform;
+    text-decoration: $decoration;
+}

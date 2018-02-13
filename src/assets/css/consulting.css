@@ -1,0 +1,11 @@
+.consulting-wrapper {
+  padding: 0 15px; }
+  .consulting-wrapper .service-cards {
+    border: solid 0.5px #efefef;
+    margin: 30px 0; }
+    .consulting-wrapper .service-cards img,
+    .consulting-wrapper .service-cards .service-details {
+      width: 50%;
+      float: left; }
+    .consulting-wrapper .service-cards:nth-child(2n) img {
+      float: right; }

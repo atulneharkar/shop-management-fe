@@ -1,0 +1,1088 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+body {
+  line-height: 1;
+  color: black;
+  background: white; }
+
+ol, ul {
+  list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/avenir-next-regular.ttf"); }
+
+header {
+  background: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62px;
+  z-index: 1; }
+  header .header-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px;
+    margin: 0 auto;
+    height: 62px; }
+    header .header-wrapper .main-logo {
+      width: 124px; }
+      header .header-wrapper .main-logo .site-logo {
+        width: 100%; }
+      @media only screen and (max-width: 719px) {
+        header .header-wrapper .main-logo {
+          position: relative;
+          z-index: 9999; } }
+    header .header-wrapper .main-nav ul {
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 2px; }
+      @media only screen and (max-width: 719px) {
+        header .header-wrapper .main-nav ul {
+          width: 100%;
+          text-align: center; } }
+      header .header-wrapper .main-nav ul li {
+        margin-right: 30px;
+        display: inline-block; }
+        @media only screen and (min-width: 1024px) {
+          header .header-wrapper .main-nav ul li {
+            margin-right: 80px; } }
+        @media only screen and (min-width: 960px) and (max-width: 1023px) {
+          header .header-wrapper .main-nav ul li {
+            margin-right: 60px; } }
+        @media only screen and (max-width: 719px) {
+          header .header-wrapper .main-nav ul li {
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            border-bottom: 0.5px solid #efefef; } }
+        header .header-wrapper .main-nav ul li a {
+          font-family: "Avenir", Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          color: #fff;
+          text-transform: none;
+          text-decoration: none; }
+          header .header-wrapper .main-nav ul li a:hover, header .header-wrapper .main-nav ul li a.active {
+            color: #ff566f; }
+          @media only screen and (max-width: 719px) {
+            header .header-wrapper .main-nav ul li a {
+              color: #fff;
+              width: 100%;
+              display: block;
+              padding-bottom: 20px; } }
+    header .header-wrapper .main-nav .sign-in-btn {
+      padding: 10px;
+      background: #ff566f;
+      border-radius: 4px;
+      margin-top: -5px;
+      display: inline-block;
+      font-family: "Avenir", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color: #fff;
+      text-transform: none;
+      text-decoration: none; }
+      header .header-wrapper .main-nav .sign-in-btn:hover {
+        background: #fff;
+        color: #333; }
+        @media only screen and (max-width: 719px) {
+          header .header-wrapper .main-nav .sign-in-btn:hover {
+            color: #fff; } }
+      @media only screen and (max-width: 719px) {
+        header .header-wrapper .main-nav .sign-in-btn {
+          width: 100px;
+          text-align: center;
+          margin: 0 auto;
+          display: block;
+          padding: 15px;
+          border-radius: 3px;
+          background: #ff566f;
+          color: #fff; } }
+    header .header-wrapper .main-nav .hamburger-icon,
+    header .header-wrapper .main-nav .close-icon {
+      display: none;
+      margin-top: -3px;
+      float: right;
+      position: relative;
+      z-index: 9999; }
+      @media only screen and (max-width: 719px) {
+        header .header-wrapper .main-nav .hamburger-icon,
+        header .header-wrapper .main-nav .close-icon {
+          display: block; } }
+    @media only screen and (max-width: 719px) {
+      header .header-wrapper .main-nav .hamburger-hide,
+      header .header-wrapper .main-nav .close-icon {
+        display: none; }
+      header .header-wrapper .main-nav .close-icon-show {
+        display: block; } }
+    header .header-wrapper .main-nav .close-icon {
+      margin-top: -1px; }
+    @media only screen and (max-width: 719px) {
+      header .header-wrapper .main-nav .mobile-menu {
+        width: 100%;
+        padding: 20px 0;
+        display: none;
+        background: #333;
+        position: absolute;
+        left: 0;
+        top: 61px;
+        z-index: 9999; }
+      header .header-wrapper .main-nav .mobile-menu-show {
+        display: block; }
+      header .header-wrapper .main-nav .overlay {
+        width: 100%;
+        height: 100%;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: #333;
+        opacity: 0.6; }
+      header .header-wrapper .main-nav .overlay-show {
+        display: block; } }
+    header .header-wrapper .my-profile {
+      display: inline-block;
+      position: relative; }
+      @media only screen and (max-width: 719px) {
+        header .header-wrapper .my-profile {
+          width: 100%;
+          padding: 0 20px; } }
+      header .header-wrapper .my-profile .profile-image {
+        border-radius: 50%;
+        position: relative;
+        top: -3px; }
+        @media only screen and (max-width: 719px) {
+          header .header-wrapper .my-profile .profile-image {
+            display: none; } }
+      header .header-wrapper .my-profile .additional-profile-info {
+        display: none;
+        padding: 20px;
+        position: absolute;
+        right: -2px;
+        top: 28px;
+        z-index: 999;
+        background: #ff566f;
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #fff;
+        text-transform: none;
+        text-decoration: none; }
+        @media only screen and (max-width: 719px) {
+          header .header-wrapper .my-profile .additional-profile-info {
+            display: block;
+            position: static;
+            padding: 0;
+            background: none; } }
+        header .header-wrapper .my-profile .additional-profile-info p {
+          margin-bottom: 6px; }
+          @media only screen and (max-width: 719px) {
+            header .header-wrapper .my-profile .additional-profile-info p {
+              display: none; } }
+        header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper {
+          margin-top: 20px; }
+          header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a {
+            width: 45%;
+            padding: 6px;
+            border-radius: 3px;
+            float: left;
+            background: #fff;
+            color: #333;
+            text-align: center;
+            text-decoration: none; }
+            @media only screen and (max-width: 719px) {
+              header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a {
+                background: #ff566f;
+                color: #fff;
+                padding: 15px; } }
+            header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a:hover {
+              color: #ff566f; }
+              @media only screen and (max-width: 719px) {
+                header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a:hover {
+                  background: #ff566f;
+                  color: #fff; } }
+            header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a:last-child {
+              float: right; }
+          @media only screen and (max-width: 719px) {
+            header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper {
+              margin-top: 0;
+              text-align: center; } }
+      header .header-wrapper .my-profile:hover .additional-profile-info {
+        display: block; }
+
+.header-profile-img .header-wrapper {
+  padding-bottom: 10px; }
+  @media only screen and (max-width: 719px) {
+    .header-profile-img .header-wrapper {
+      padding-bottom: 17px; } }
+
+.login-form,
+.register-form,
+.reset-pwd-form,
+.forgot-pwd-form,
+.contact-form,
+.trending-form,
+.course-form,
+.product-form,
+.category-form,
+.stock-sold-form,
+.stock-purchase-form {
+  width: 500px;
+  padding: 92px 0 70px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 719px) {
+    .login-form,
+    .register-form,
+    .reset-pwd-form,
+    .forgot-pwd-form,
+    .contact-form,
+    .trending-form,
+    .course-form,
+    .product-form,
+    .category-form,
+    .stock-sold-form,
+    .stock-purchase-form {
+      width: 100%;
+      max-width: 430px;
+      padding: 92px 20px 80px; } }
+  .login-form .form-text,
+  .register-form .form-text,
+  .reset-pwd-form .form-text,
+  .forgot-pwd-form .form-text,
+  .contact-form .form-text,
+  .trending-form .form-text,
+  .course-form .form-text,
+  .product-form .form-text,
+  .category-form .form-text,
+  .stock-sold-form .form-text,
+  .stock-purchase-form .form-text {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #968f8f;
+    text-transform: none;
+    text-decoration: none;
+    line-height: 25px; }
+    @media only screen and (max-width: 719px) {
+      .login-form .form-text,
+      .register-form .form-text,
+      .reset-pwd-form .form-text,
+      .forgot-pwd-form .form-text,
+      .contact-form .form-text,
+      .trending-form .form-text,
+      .course-form .form-text,
+      .product-form .form-text,
+      .category-form .form-text,
+      .stock-sold-form .form-text,
+      .stock-purchase-form .form-text {
+        font-size: 16px;
+        line-height: 20px; } }
+    .login-form .form-text span,
+    .register-form .form-text span,
+    .reset-pwd-form .form-text span,
+    .forgot-pwd-form .form-text span,
+    .contact-form .form-text span,
+    .trending-form .form-text span,
+    .course-form .form-text span,
+    .product-form .form-text span,
+    .category-form .form-text span,
+    .stock-sold-form .form-text span,
+    .stock-purchase-form .form-text span {
+      color: #ff566f; }
+  .login-form form,
+  .register-form form,
+  .reset-pwd-form form,
+  .forgot-pwd-form form,
+  .contact-form form,
+  .trending-form form,
+  .course-form form,
+  .product-form form,
+  .category-form form,
+  .stock-sold-form form,
+  .stock-purchase-form form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    text-transform: none;
+    text-decoration: none; }
+    @media only screen and (max-width: 719px) {
+      .login-form form,
+      .register-form form,
+      .reset-pwd-form form,
+      .forgot-pwd-form form,
+      .contact-form form,
+      .trending-form form,
+      .course-form form,
+      .product-form form,
+      .category-form form,
+      .stock-sold-form form,
+      .stock-purchase-form form {
+        width: 100%; } }
+    .login-form form .help-text,
+    .register-form form .help-text,
+    .reset-pwd-form form .help-text,
+    .forgot-pwd-form form .help-text,
+    .contact-form form .help-text,
+    .trending-form form .help-text,
+    .course-form form .help-text,
+    .product-form form .help-text,
+    .category-form form .help-text,
+    .stock-sold-form form .help-text,
+    .stock-purchase-form form .help-text {
+      margin: -15px 0 15px;
+      font-size: 13px;
+      color: #aaa; }
+    .login-form form .form-title,
+    .register-form form .form-title,
+    .reset-pwd-form form .form-title,
+    .forgot-pwd-form form .form-title,
+    .contact-form form .form-title,
+    .trending-form form .form-title,
+    .course-form form .form-title,
+    .product-form form .form-title,
+    .category-form form .form-title,
+    .stock-sold-form form .form-title,
+    .stock-purchase-form form .form-title {
+      margin: 0 0 30px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 17px; }
+    .login-form form .field-wrapper,
+    .login-form form .file-upload-wrapper,
+    .register-form form .field-wrapper,
+    .register-form form .file-upload-wrapper,
+    .reset-pwd-form form .field-wrapper,
+    .reset-pwd-form form .file-upload-wrapper,
+    .forgot-pwd-form form .field-wrapper,
+    .forgot-pwd-form form .file-upload-wrapper,
+    .contact-form form .field-wrapper,
+    .contact-form form .file-upload-wrapper,
+    .trending-form form .field-wrapper,
+    .trending-form form .file-upload-wrapper,
+    .course-form form .field-wrapper,
+    .course-form form .file-upload-wrapper,
+    .product-form form .field-wrapper,
+    .product-form form .file-upload-wrapper,
+    .category-form form .field-wrapper,
+    .category-form form .file-upload-wrapper,
+    .stock-sold-form form .field-wrapper,
+    .stock-sold-form form .file-upload-wrapper,
+    .stock-purchase-form form .field-wrapper,
+    .stock-purchase-form form .file-upload-wrapper {
+      margin-bottom: 20px; }
+      .login-form form .field-wrapper input,
+      .login-form form .field-wrapper textarea,
+      .login-form form .field-wrapper .Select,
+      .login-form form .file-upload-wrapper input,
+      .login-form form .file-upload-wrapper textarea,
+      .login-form form .file-upload-wrapper .Select,
+      .register-form form .field-wrapper input,
+      .register-form form .field-wrapper textarea,
+      .register-form form .field-wrapper .Select,
+      .register-form form .file-upload-wrapper input,
+      .register-form form .file-upload-wrapper textarea,
+      .register-form form .file-upload-wrapper .Select,
+      .reset-pwd-form form .field-wrapper input,
+      .reset-pwd-form form .field-wrapper textarea,
+      .reset-pwd-form form .field-wrapper .Select,
+      .reset-pwd-form form .file-upload-wrapper input,
+      .reset-pwd-form form .file-upload-wrapper textarea,
+      .reset-pwd-form form .file-upload-wrapper .Select,
+      .forgot-pwd-form form .field-wrapper input,
+      .forgot-pwd-form form .field-wrapper textarea,
+      .forgot-pwd-form form .field-wrapper .Select,
+      .forgot-pwd-form form .file-upload-wrapper input,
+      .forgot-pwd-form form .file-upload-wrapper textarea,
+      .forgot-pwd-form form .file-upload-wrapper .Select,
+      .contact-form form .field-wrapper input,
+      .contact-form form .field-wrapper textarea,
+      .contact-form form .field-wrapper .Select,
+      .contact-form form .file-upload-wrapper input,
+      .contact-form form .file-upload-wrapper textarea,
+      .contact-form form .file-upload-wrapper .Select,
+      .trending-form form .field-wrapper input,
+      .trending-form form .field-wrapper textarea,
+      .trending-form form .field-wrapper .Select,
+      .trending-form form .file-upload-wrapper input,
+      .trending-form form .file-upload-wrapper textarea,
+      .trending-form form .file-upload-wrapper .Select,
+      .course-form form .field-wrapper input,
+      .course-form form .field-wrapper textarea,
+      .course-form form .field-wrapper .Select,
+      .course-form form .file-upload-wrapper input,
+      .course-form form .file-upload-wrapper textarea,
+      .course-form form .file-upload-wrapper .Select,
+      .product-form form .field-wrapper input,
+      .product-form form .field-wrapper textarea,
+      .product-form form .field-wrapper .Select,
+      .product-form form .file-upload-wrapper input,
+      .product-form form .file-upload-wrapper textarea,
+      .product-form form .file-upload-wrapper .Select,
+      .category-form form .field-wrapper input,
+      .category-form form .field-wrapper textarea,
+      .category-form form .field-wrapper .Select,
+      .category-form form .file-upload-wrapper input,
+      .category-form form .file-upload-wrapper textarea,
+      .category-form form .file-upload-wrapper .Select,
+      .stock-sold-form form .field-wrapper input,
+      .stock-sold-form form .field-wrapper textarea,
+      .stock-sold-form form .field-wrapper .Select,
+      .stock-sold-form form .file-upload-wrapper input,
+      .stock-sold-form form .file-upload-wrapper textarea,
+      .stock-sold-form form .file-upload-wrapper .Select,
+      .stock-purchase-form form .field-wrapper input,
+      .stock-purchase-form form .field-wrapper textarea,
+      .stock-purchase-form form .field-wrapper .Select,
+      .stock-purchase-form form .file-upload-wrapper input,
+      .stock-purchase-form form .file-upload-wrapper textarea,
+      .stock-purchase-form form .file-upload-wrapper .Select {
+        width: 100%;
+        height: 30px;
+        padding: 4px 10px;
+        border: solid 0.5px #e6e6e6;
+        border-radius: 4px; }
+      .login-form form .field-wrapper .Select,
+      .login-form form .file-upload-wrapper .Select,
+      .register-form form .field-wrapper .Select,
+      .register-form form .file-upload-wrapper .Select,
+      .reset-pwd-form form .field-wrapper .Select,
+      .reset-pwd-form form .file-upload-wrapper .Select,
+      .forgot-pwd-form form .field-wrapper .Select,
+      .forgot-pwd-form form .file-upload-wrapper .Select,
+      .contact-form form .field-wrapper .Select,
+      .contact-form form .file-upload-wrapper .Select,
+      .trending-form form .field-wrapper .Select,
+      .trending-form form .file-upload-wrapper .Select,
+      .course-form form .field-wrapper .Select,
+      .course-form form .file-upload-wrapper .Select,
+      .product-form form .field-wrapper .Select,
+      .product-form form .file-upload-wrapper .Select,
+      .category-form form .field-wrapper .Select,
+      .category-form form .file-upload-wrapper .Select,
+      .stock-sold-form form .field-wrapper .Select,
+      .stock-sold-form form .file-upload-wrapper .Select,
+      .stock-purchase-form form .field-wrapper .Select,
+      .stock-purchase-form form .file-upload-wrapper .Select {
+        padding: 0;
+        border: none; }
+        .login-form form .field-wrapper .Select .Select-clear-zone,
+        .login-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .register-form form .field-wrapper .Select .Select-clear-zone,
+        .register-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .reset-pwd-form form .field-wrapper .Select .Select-clear-zone,
+        .reset-pwd-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .forgot-pwd-form form .field-wrapper .Select .Select-clear-zone,
+        .forgot-pwd-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .contact-form form .field-wrapper .Select .Select-clear-zone,
+        .contact-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .trending-form form .field-wrapper .Select .Select-clear-zone,
+        .trending-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .course-form form .field-wrapper .Select .Select-clear-zone,
+        .course-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .product-form form .field-wrapper .Select .Select-clear-zone,
+        .product-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .category-form form .field-wrapper .Select .Select-clear-zone,
+        .category-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .stock-sold-form form .field-wrapper .Select .Select-clear-zone,
+        .stock-sold-form form .file-upload-wrapper .Select .Select-clear-zone,
+        .stock-purchase-form form .field-wrapper .Select .Select-clear-zone,
+        .stock-purchase-form form .file-upload-wrapper .Select .Select-clear-zone {
+          display: none; }
+        .login-form form .field-wrapper .Select .Select-input,
+        .login-form form .file-upload-wrapper .Select .Select-input,
+        .register-form form .field-wrapper .Select .Select-input,
+        .register-form form .file-upload-wrapper .Select .Select-input,
+        .reset-pwd-form form .field-wrapper .Select .Select-input,
+        .reset-pwd-form form .file-upload-wrapper .Select .Select-input,
+        .forgot-pwd-form form .field-wrapper .Select .Select-input,
+        .forgot-pwd-form form .file-upload-wrapper .Select .Select-input,
+        .contact-form form .field-wrapper .Select .Select-input,
+        .contact-form form .file-upload-wrapper .Select .Select-input,
+        .trending-form form .field-wrapper .Select .Select-input,
+        .trending-form form .file-upload-wrapper .Select .Select-input,
+        .course-form form .field-wrapper .Select .Select-input,
+        .course-form form .file-upload-wrapper .Select .Select-input,
+        .product-form form .field-wrapper .Select .Select-input,
+        .product-form form .file-upload-wrapper .Select .Select-input,
+        .category-form form .field-wrapper .Select .Select-input,
+        .category-form form .file-upload-wrapper .Select .Select-input,
+        .stock-sold-form form .field-wrapper .Select .Select-input,
+        .stock-sold-form form .file-upload-wrapper .Select .Select-input,
+        .stock-purchase-form form .field-wrapper .Select .Select-input,
+        .stock-purchase-form form .file-upload-wrapper .Select .Select-input {
+          height: 30px; }
+        .login-form form .field-wrapper .Select .Select-control,
+        .login-form form .file-upload-wrapper .Select .Select-control,
+        .register-form form .field-wrapper .Select .Select-control,
+        .register-form form .file-upload-wrapper .Select .Select-control,
+        .reset-pwd-form form .field-wrapper .Select .Select-control,
+        .reset-pwd-form form .file-upload-wrapper .Select .Select-control,
+        .forgot-pwd-form form .field-wrapper .Select .Select-control,
+        .forgot-pwd-form form .file-upload-wrapper .Select .Select-control,
+        .contact-form form .field-wrapper .Select .Select-control,
+        .contact-form form .file-upload-wrapper .Select .Select-control,
+        .trending-form form .field-wrapper .Select .Select-control,
+        .trending-form form .file-upload-wrapper .Select .Select-control,
+        .course-form form .field-wrapper .Select .Select-control,
+        .course-form form .file-upload-wrapper .Select .Select-control,
+        .product-form form .field-wrapper .Select .Select-control,
+        .product-form form .file-upload-wrapper .Select .Select-control,
+        .category-form form .field-wrapper .Select .Select-control,
+        .category-form form .file-upload-wrapper .Select .Select-control,
+        .stock-sold-form form .field-wrapper .Select .Select-control,
+        .stock-sold-form form .file-upload-wrapper .Select .Select-control,
+        .stock-purchase-form form .field-wrapper .Select .Select-control,
+        .stock-purchase-form form .file-upload-wrapper .Select .Select-control {
+          border: solid 0.5px #e6e6e6;
+          height: 30px; }
+          .login-form form .field-wrapper .Select .Select-control input,
+          .login-form form .file-upload-wrapper .Select .Select-control input,
+          .register-form form .field-wrapper .Select .Select-control input,
+          .register-form form .file-upload-wrapper .Select .Select-control input,
+          .reset-pwd-form form .field-wrapper .Select .Select-control input,
+          .reset-pwd-form form .file-upload-wrapper .Select .Select-control input,
+          .forgot-pwd-form form .field-wrapper .Select .Select-control input,
+          .forgot-pwd-form form .file-upload-wrapper .Select .Select-control input,
+          .contact-form form .field-wrapper .Select .Select-control input,
+          .contact-form form .file-upload-wrapper .Select .Select-control input,
+          .trending-form form .field-wrapper .Select .Select-control input,
+          .trending-form form .file-upload-wrapper .Select .Select-control input,
+          .course-form form .field-wrapper .Select .Select-control input,
+          .course-form form .file-upload-wrapper .Select .Select-control input,
+          .product-form form .field-wrapper .Select .Select-control input,
+          .product-form form .file-upload-wrapper .Select .Select-control input,
+          .category-form form .field-wrapper .Select .Select-control input,
+          .category-form form .file-upload-wrapper .Select .Select-control input,
+          .stock-sold-form form .field-wrapper .Select .Select-control input,
+          .stock-sold-form form .file-upload-wrapper .Select .Select-control input,
+          .stock-purchase-form form .field-wrapper .Select .Select-control input,
+          .stock-purchase-form form .file-upload-wrapper .Select .Select-control input {
+            border: none;
+            padding: 0px; }
+      .login-form form .field-wrapper textarea,
+      .login-form form .file-upload-wrapper textarea,
+      .register-form form .field-wrapper textarea,
+      .register-form form .file-upload-wrapper textarea,
+      .reset-pwd-form form .field-wrapper textarea,
+      .reset-pwd-form form .file-upload-wrapper textarea,
+      .forgot-pwd-form form .field-wrapper textarea,
+      .forgot-pwd-form form .file-upload-wrapper textarea,
+      .contact-form form .field-wrapper textarea,
+      .contact-form form .file-upload-wrapper textarea,
+      .trending-form form .field-wrapper textarea,
+      .trending-form form .file-upload-wrapper textarea,
+      .course-form form .field-wrapper textarea,
+      .course-form form .file-upload-wrapper textarea,
+      .product-form form .field-wrapper textarea,
+      .product-form form .file-upload-wrapper textarea,
+      .category-form form .field-wrapper textarea,
+      .category-form form .file-upload-wrapper textarea,
+      .stock-sold-form form .field-wrapper textarea,
+      .stock-sold-form form .file-upload-wrapper textarea,
+      .stock-purchase-form form .field-wrapper textarea,
+      .stock-purchase-form form .file-upload-wrapper textarea {
+        height: 80px;
+        resize: vertical; }
+    .login-form form .file-upload-wrapper,
+    .register-form form .file-upload-wrapper,
+    .reset-pwd-form form .file-upload-wrapper,
+    .forgot-pwd-form form .file-upload-wrapper,
+    .contact-form form .file-upload-wrapper,
+    .trending-form form .file-upload-wrapper,
+    .course-form form .file-upload-wrapper,
+    .product-form form .file-upload-wrapper,
+    .category-form form .file-upload-wrapper,
+    .stock-sold-form form .file-upload-wrapper,
+    .stock-purchase-form form .file-upload-wrapper {
+      margin-bottom: 7px; }
+      .login-form form .file-upload-wrapper input,
+      .register-form form .file-upload-wrapper input,
+      .reset-pwd-form form .file-upload-wrapper input,
+      .forgot-pwd-form form .file-upload-wrapper input,
+      .contact-form form .file-upload-wrapper input,
+      .trending-form form .file-upload-wrapper input,
+      .course-form form .file-upload-wrapper input,
+      .product-form form .file-upload-wrapper input,
+      .category-form form .file-upload-wrapper input,
+      .stock-sold-form form .file-upload-wrapper input,
+      .stock-purchase-form form .file-upload-wrapper input {
+        border: none;
+        outline: none;
+        padding: 0;
+        margin-top: 10px; }
+    .login-form form .sign-in-btn-link,
+    .login-form form .submit-btn-link,
+    .register-form form .sign-in-btn-link,
+    .register-form form .submit-btn-link,
+    .reset-pwd-form form .sign-in-btn-link,
+    .reset-pwd-form form .submit-btn-link,
+    .forgot-pwd-form form .sign-in-btn-link,
+    .forgot-pwd-form form .submit-btn-link,
+    .contact-form form .sign-in-btn-link,
+    .contact-form form .submit-btn-link,
+    .trending-form form .sign-in-btn-link,
+    .trending-form form .submit-btn-link,
+    .course-form form .sign-in-btn-link,
+    .course-form form .submit-btn-link,
+    .product-form form .sign-in-btn-link,
+    .product-form form .submit-btn-link,
+    .category-form form .sign-in-btn-link,
+    .category-form form .submit-btn-link,
+    .stock-sold-form form .sign-in-btn-link,
+    .stock-sold-form form .submit-btn-link,
+    .stock-purchase-form form .sign-in-btn-link,
+    .stock-purchase-form form .submit-btn-link {
+      width: 100%;
+      height: 30px;
+      display: block;
+      background: #ff566f;
+      border-color: #ff566f;
+      color: #fff; }
+  .login-form .forgot-password-btn-link,
+  .login-form .register-btn-link,
+  .login-form .login-btn-link,
+  .login-form .admin-dashboard-link,
+  .register-form .forgot-password-btn-link,
+  .register-form .register-btn-link,
+  .register-form .login-btn-link,
+  .register-form .admin-dashboard-link,
+  .reset-pwd-form .forgot-password-btn-link,
+  .reset-pwd-form .register-btn-link,
+  .reset-pwd-form .login-btn-link,
+  .reset-pwd-form .admin-dashboard-link,
+  .forgot-pwd-form .forgot-password-btn-link,
+  .forgot-pwd-form .register-btn-link,
+  .forgot-pwd-form .login-btn-link,
+  .forgot-pwd-form .admin-dashboard-link,
+  .contact-form .forgot-password-btn-link,
+  .contact-form .register-btn-link,
+  .contact-form .login-btn-link,
+  .contact-form .admin-dashboard-link,
+  .trending-form .forgot-password-btn-link,
+  .trending-form .register-btn-link,
+  .trending-form .login-btn-link,
+  .trending-form .admin-dashboard-link,
+  .course-form .forgot-password-btn-link,
+  .course-form .register-btn-link,
+  .course-form .login-btn-link,
+  .course-form .admin-dashboard-link,
+  .product-form .forgot-password-btn-link,
+  .product-form .register-btn-link,
+  .product-form .login-btn-link,
+  .product-form .admin-dashboard-link,
+  .category-form .forgot-password-btn-link,
+  .category-form .register-btn-link,
+  .category-form .login-btn-link,
+  .category-form .admin-dashboard-link,
+  .stock-sold-form .forgot-password-btn-link,
+  .stock-sold-form .register-btn-link,
+  .stock-sold-form .login-btn-link,
+  .stock-sold-form .admin-dashboard-link,
+  .stock-purchase-form .forgot-password-btn-link,
+  .stock-purchase-form .register-btn-link,
+  .stock-purchase-form .login-btn-link,
+  .stock-purchase-form .admin-dashboard-link {
+    display: block;
+    margin: 20px 0 0; }
+    .login-form .forgot-password-btn-link a,
+    .login-form .register-btn-link a,
+    .login-form .login-btn-link a,
+    .login-form .admin-dashboard-link a,
+    .register-form .forgot-password-btn-link a,
+    .register-form .register-btn-link a,
+    .register-form .login-btn-link a,
+    .register-form .admin-dashboard-link a,
+    .reset-pwd-form .forgot-password-btn-link a,
+    .reset-pwd-form .register-btn-link a,
+    .reset-pwd-form .login-btn-link a,
+    .reset-pwd-form .admin-dashboard-link a,
+    .forgot-pwd-form .forgot-password-btn-link a,
+    .forgot-pwd-form .register-btn-link a,
+    .forgot-pwd-form .login-btn-link a,
+    .forgot-pwd-form .admin-dashboard-link a,
+    .contact-form .forgot-password-btn-link a,
+    .contact-form .register-btn-link a,
+    .contact-form .login-btn-link a,
+    .contact-form .admin-dashboard-link a,
+    .trending-form .forgot-password-btn-link a,
+    .trending-form .register-btn-link a,
+    .trending-form .login-btn-link a,
+    .trending-form .admin-dashboard-link a,
+    .course-form .forgot-password-btn-link a,
+    .course-form .register-btn-link a,
+    .course-form .login-btn-link a,
+    .course-form .admin-dashboard-link a,
+    .product-form .forgot-password-btn-link a,
+    .product-form .register-btn-link a,
+    .product-form .login-btn-link a,
+    .product-form .admin-dashboard-link a,
+    .category-form .forgot-password-btn-link a,
+    .category-form .register-btn-link a,
+    .category-form .login-btn-link a,
+    .category-form .admin-dashboard-link a,
+    .stock-sold-form .forgot-password-btn-link a,
+    .stock-sold-form .register-btn-link a,
+    .stock-sold-form .login-btn-link a,
+    .stock-sold-form .admin-dashboard-link a,
+    .stock-purchase-form .forgot-password-btn-link a,
+    .stock-purchase-form .register-btn-link a,
+    .stock-purchase-form .login-btn-link a,
+    .stock-purchase-form .admin-dashboard-link a {
+      color: #3980d8;
+      text-decoration: none; }
+      .login-form .forgot-password-btn-link a:hover,
+      .login-form .register-btn-link a:hover,
+      .login-form .login-btn-link a:hover,
+      .login-form .admin-dashboard-link a:hover,
+      .register-form .forgot-password-btn-link a:hover,
+      .register-form .register-btn-link a:hover,
+      .register-form .login-btn-link a:hover,
+      .register-form .admin-dashboard-link a:hover,
+      .reset-pwd-form .forgot-password-btn-link a:hover,
+      .reset-pwd-form .register-btn-link a:hover,
+      .reset-pwd-form .login-btn-link a:hover,
+      .reset-pwd-form .admin-dashboard-link a:hover,
+      .forgot-pwd-form .forgot-password-btn-link a:hover,
+      .forgot-pwd-form .register-btn-link a:hover,
+      .forgot-pwd-form .login-btn-link a:hover,
+      .forgot-pwd-form .admin-dashboard-link a:hover,
+      .contact-form .forgot-password-btn-link a:hover,
+      .contact-form .register-btn-link a:hover,
+      .contact-form .login-btn-link a:hover,
+      .contact-form .admin-dashboard-link a:hover,
+      .trending-form .forgot-password-btn-link a:hover,
+      .trending-form .register-btn-link a:hover,
+      .trending-form .login-btn-link a:hover,
+      .trending-form .admin-dashboard-link a:hover,
+      .course-form .forgot-password-btn-link a:hover,
+      .course-form .register-btn-link a:hover,
+      .course-form .login-btn-link a:hover,
+      .course-form .admin-dashboard-link a:hover,
+      .product-form .forgot-password-btn-link a:hover,
+      .product-form .register-btn-link a:hover,
+      .product-form .login-btn-link a:hover,
+      .product-form .admin-dashboard-link a:hover,
+      .category-form .forgot-password-btn-link a:hover,
+      .category-form .register-btn-link a:hover,
+      .category-form .login-btn-link a:hover,
+      .category-form .admin-dashboard-link a:hover,
+      .stock-sold-form .forgot-password-btn-link a:hover,
+      .stock-sold-form .register-btn-link a:hover,
+      .stock-sold-form .login-btn-link a:hover,
+      .stock-sold-form .admin-dashboard-link a:hover,
+      .stock-purchase-form .forgot-password-btn-link a:hover,
+      .stock-purchase-form .register-btn-link a:hover,
+      .stock-purchase-form .login-btn-link a:hover,
+      .stock-purchase-form .admin-dashboard-link a:hover {
+        color: #ff566f; }
+  .login-form .facebook-login button,
+  .login-form .google-login button,
+  .register-form .facebook-login button,
+  .register-form .google-login button,
+  .reset-pwd-form .facebook-login button,
+  .reset-pwd-form .google-login button,
+  .forgot-pwd-form .facebook-login button,
+  .forgot-pwd-form .google-login button,
+  .contact-form .facebook-login button,
+  .contact-form .google-login button,
+  .trending-form .facebook-login button,
+  .trending-form .google-login button,
+  .course-form .facebook-login button,
+  .course-form .google-login button,
+  .product-form .facebook-login button,
+  .product-form .google-login button,
+  .category-form .facebook-login button,
+  .category-form .google-login button,
+  .stock-sold-form .facebook-login button,
+  .stock-sold-form .google-login button,
+  .stock-purchase-form .facebook-login button,
+  .stock-purchase-form .google-login button {
+    width: 100% !important;
+    height: 30px !important;
+    padding: 0 !important;
+    margin: 20px 0 0 !important;
+    font-size: 14px !important;
+    font-family: "Avenir", Helvetica, Arial, sans-serif !important;
+    text-transform: none !important; }
+  .login-form .google-login button,
+  .register-form .google-login button,
+  .reset-pwd-form .google-login button,
+  .forgot-pwd-form .google-login button,
+  .contact-form .google-login button,
+  .trending-form .google-login button,
+  .course-form .google-login button,
+  .product-form .google-login button,
+  .category-form .google-login button,
+  .stock-sold-form .google-login button,
+  .stock-purchase-form .google-login button {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-transform: none;
+    text-decoration: none; }
+
+.error-msg,
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin: 5px 0 0 3px; }
+
+.file-size-error {
+  margin: 0 0 20px; }
+
+.loader-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  opacity: 0.8;
+  z-index: 9999; }
+
+.loader-img {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  margin: -25px 0 0 -25px; }
+
+.success-message {
+  margin-top: 20px;
+  color: #2dcc2d;
+  font-size: 16px;
+  line-height: 21px; }
+
+.wrapper {
+  padding: 92px 20px 73px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-transform: none;
+  text-decoration: none; }
+
+.main-title {
+  margin: 0 0 30px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 17px; }
+
+.create-product-btn,
+.create-product-btn:hover,
+.create-product-btn:focus,
+.create-product-btn:active,
+.create-category-btn,
+.create-category-btn:hover,
+.create-category-btn:focus,
+.create-category-btn:active {
+  padding: 12px;
+  border-radius: 8px;
+  float: right;
+  background: #ff566f;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px; }
+
+.category-filter {
+  float: left; }
+
+table thead th {
+  font-weight: bold; }
+
+.table > tbody > tr > td {
+  vertical-align: middle; }
+
+.delete-link,
+.edit-link {
+  color: #ff566f;
+  cursor: pointer;
+  text-decoration: none; }
+
+.status-text {
+  text-transform: capitalize; }
+
+.delete-link:hover,
+.edit-link:hover {
+  text-decoration: underline;
+  color: #ff566f; }
+
+@media only screen and (max-width: 719px) {
+  .category-filter {
+    margin-bottom: 20px;
+    display: block;
+    float: none; } }
+
+.category-filter select {
+  height: 30px;
+  padding: 4px 10px;
+  border: solid 0.5px #e6e6e6;
+  border-radius: 4px; }
+
+.product-card {
+  border: solid 0.5px #efefef;
+  margin: 0 0 30px;
+  padding: 20px;
+  box-shadow: -4px 4px 0 0 rgba(0, 0, 0, 0.05);
+  position: relative; }
+  .product-card:last-child {
+    margin-bottom: 0; }
+  .product-card img {
+    width: 100px;
+    margin-right: 20px;
+    float: left; }
+    @media only screen and (max-width: 719px) {
+      .product-card img {
+        width: 100%;
+        display: block;
+        float: none;
+        margin-top: 30px; } }
+  .product-card .product-info {
+    float: left;
+    width: 60%; }
+    @media only screen and (max-width: 719px) {
+      .product-card .product-info {
+        width: 100%;
+        display: block;
+        float: none;
+        margin-top: 20px; } }
+    .product-card .product-info .product-title {
+      font-size: 17px; }
+    .product-card .product-info .total-stock-details span {
+      color: #ff566f; }
+    .product-card .product-info .product-category {
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .product-card .product-info p {
+      margin-bottom: 10px; }
+    .product-card .product-info .product-stock-links a:first-child {
+      margin-right: 20px; }
+      @media only screen and (max-width: 719px) {
+        .product-card .product-info .product-stock-links a:first-child {
+          display: block;
+          margin-bottom: 10px; } }
+  .product-card .product-update-links {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+    .product-card .product-update-links .delete-link {
+      margin-left: 10px; }
+
+.purchase-sold-details h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-top: 1px solid #efefef;
+  margin-top: 20px;
+  padding-top: 20px; }
+
+.purchase-sold-details .table {
+  margin-bottom: 0; }
+
+.modal-message {
+  width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -250px;
+  z-index: 99999;
+  display: none;
+  background: #fff; }
+  .modal-message p {
+    font-size: 16px;
+    margin-bottom: 20px; }
+  .modal-message .modal-btn-wrapper span {
+    width: 70px;
+    padding: 8px 0;
+    border-radius: 6px;
+    display: inline-block;
+    cursor: pointer; }
+  .modal-message .modal-btn-wrapper span:first-child {
+    background: #fff;
+    color: #333;
+    border: 1px solid #333; }
+  .modal-message .modal-btn-wrapper span:last-child {
+    background: #ff566f;
+    color: #fff;
+    margin-left: 20px; }
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  opacity: 0.7;
+  z-index: 9999;
+  display: none; }
+
+.show-stock-modal .modal-message,
+.show-stock-modal .modal-overlay,
+.show-product-modal .modal-message,
+.show-product-modal .modal-overlay,
+.show-category-modal .modal-message,
+.show-category-modal .modal-overlay {
+  display: block; }
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #eee;
+  border-top: solid 0.5px #ccc;
+  padding: 10px 0; }
+  footer .footer-wrapper .copy-right-text {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #333;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center; }

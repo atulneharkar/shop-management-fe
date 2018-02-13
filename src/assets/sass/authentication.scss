@@ -1,0 +1,195 @@
+.login-form,
+.register-form,
+.reset-pwd-form,
+.forgot-pwd-form,
+.contact-form,
+.trending-form,
+.course-form,
+.product-form,
+.category-form,
+.stock-sold-form,
+.stock-purchase-form {
+  width: 500px;
+  padding: 92px 0 70px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 719px) {
+    width: 100%;
+    max-width: 430px;
+    padding: 92px 20px 80px;
+  }
+
+  .form-text {
+  	@include full-font($avenir, 20px, #968f8f);
+  	line-height: 25px;
+
+    @media only screen and (max-width: 719px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+  	span {
+  		color: #ff566f;
+  	}
+  }
+
+  form {
+    width: 300px;
+    margin: 0 auto;
+    @include full-font($avenir, 14px, #333);
+
+    @media only screen and (max-width: 719px) {
+      width: 100%;
+    }
+
+    .help-text {
+      margin: -15px 0 15px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    .form-title {
+    	margin:  0 0 30px;
+    	font-weight: bold;
+    	text-align: center;
+      font-size: 17px;
+    }
+
+    .field-wrapper,
+    .file-upload-wrapper {
+    	margin-bottom: 20px;
+    	input,
+    	textarea,
+      .Select {
+	    	width: 100%;
+	    	height: 30px;
+	    	padding: 4px 10px;
+	    	border: solid 0.5px #e6e6e6;
+        border-radius: 4px;
+	    }
+
+      .Select {
+        padding: 0;
+        border: none;
+
+        .Select-clear-zone {
+          display: none;
+        }
+
+        .Select-input {
+          height: 30px;
+        }
+
+        .Select-control {
+          border: solid 0.5px #e6e6e6;
+          height: 30px;
+
+          input {
+            border: none;
+            padding: 0px;
+          }
+        }
+      }
+
+	    textarea {
+	    	height: 80px;
+	    	resize: vertical;
+	    }
+    }
+
+    .file-upload-wrapper {
+	    margin-bottom: 7px;
+    	input {
+    	  border: none;
+    	  outline: none;
+    	  padding: 0;
+    	  margin-top: 10px;
+      }
+    }
+
+    .sign-in-btn-link,
+    .submit-btn-link {
+	    width: 100%;
+	    height: 30px;
+	    display: block;
+	    background: #ff566f;
+	    border-color: #ff566f;
+	    color:  #fff;
+	  }
+  }
+
+  .forgot-password-btn-link,
+  .register-btn-link,
+  .login-btn-link,
+  .admin-dashboard-link {
+    display: block;
+    margin: 20px 0 0;
+
+    a {
+	    color: #3980d8;
+	    text-decoration: none;
+
+	    &:hover {
+	    	color: #ff566f; 
+	    }
+    }
+  }
+
+  .facebook-login,
+  .google-login {
+  	button {
+  		width: 100% !important;
+  	  height: 30px !important;
+  	  padding: 0 !important;
+  	  margin: 20px 0 0 !important;
+  	  font-size: 14px !important;
+  	  font-family: $avenir!important;
+  	  text-transform: none !important;
+  	}
+  }
+
+  .google-login {
+  	button {
+  		@include full-font($avenir, 14px, #fff);
+  	}
+  }
+}
+
+.error-msg,
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin: 5px 0 0 3px;
+}
+
+.file-size-error {
+  margin: 0 0 20px;
+ }
+
+.loader-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #333;
+  opacity: 0.8;
+  z-index: 9999;
+}
+
+.loader-img {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  margin: -25px 0 0 -25px;
+}
+
+.success-message {
+  margin-top: 20px;
+  color: #2dcc2d;
+  font-size: 16px;
+  line-height: 21px;
+}

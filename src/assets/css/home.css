@@ -1,0 +1,10 @@
+.services-card-wrapper {
+  position: relative; }
+  .services-card-wrapper .main-image {
+    width: 100%; }
+  .services-card-wrapper .floating-text {
+    position: absolute;
+    bottom: 100px;
+    left: 5%; }
+    .services-card-wrapper .floating-text .tag-line {
+      margin-bottom: 100px; }

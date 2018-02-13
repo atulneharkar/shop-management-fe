@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../fonts/avenir-next-regular.ttf"); }
+
+header {
+  background: #eee;
+  border-bottom: solid 0.5px #ccc; }
+  header .header-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px;
+    margin: 0 auto; }
+    header .header-wrapper .main-logo {
+      margin-top: 6px; }
+      header .header-wrapper .main-logo a {
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        color: #333;
+        text-transform: none;
+        text-decoration: none; }
+    header .header-wrapper .main-nav ul {
+      vertical-align: top;
+      display: inline-block;
+      margin-top: 10px; }
+      header .header-wrapper .main-nav ul li {
+        margin-right: 20px;
+        display: inline-block; }
+        header .header-wrapper .main-nav ul li a {
+          font-family: "Avenir", Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          color: #333;
+          text-transform: none;
+          text-decoration: none; }
+          header .header-wrapper .main-nav ul li a:hover {
+            color: #ff566f; }
+    header .header-wrapper .main-nav .sign-in-btn {
+      margin-top: 13px;
+      display: inline-block;
+      font-family: "Avenir", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color: #333;
+      text-transform: none;
+      text-decoration: none; }
+      header .header-wrapper .main-nav .sign-in-btn:hover {
+        color: #ff566f; }
+    header .header-wrapper .my-profile {
+      display: inline-block;
+      position: relative; }
+      header .header-wrapper .my-profile .profile-image {
+        border-radius: 50%; }
+      header .header-wrapper .my-profile .additional-profile-info {
+        display: none;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        top: 32px;
+        z-index: 999;
+        background: #ff566f;
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        color: #fff;
+        text-transform: none;
+        text-decoration: none; }
+        header .header-wrapper .my-profile .additional-profile-info p {
+          margin-bottom: 6px; }
+        header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper {
+          margin-top: 20px; }
+          header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a {
+            width: 45%;
+            padding: 6px;
+            border-radius: 3px;
+            float: left;
+            background: #fff;
+            color: #0033ff;
+            text-align: center;
+            text-decoration: none; }
+            header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a:hover {
+              color: #ff566f; }
+            header .header-wrapper .my-profile .additional-profile-info .profile-edit-wrapper a:last-child {
+              float: right; }
+      header .header-wrapper .my-profile:hover .additional-profile-info {
+        display: block; }
